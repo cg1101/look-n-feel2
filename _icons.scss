@@ -24,6 +24,7 @@ i.op, .op {
 
 i.op, .op {
   display: inline-block;
+  filter: invert(100%);
   width: 24px;
   height: 24px;
   //background-size: cover;

@@ -64,22 +64,32 @@
   background-color: $c-cool-gray-0;
   font-weight: $font-weight-bold;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   @include t-small;
   & > .title {
     @include t-title;
     margin-right: 16px;
-    font-weight: $font-weight-bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   & > .body {
     @include t-small();
     flex-grow: 99;
     margin-right: 16px;
-    font-weight: $font-weight-bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   & > .link {
     @include t-body;
-    font-weight: $font-weight-bold;
+    cursor: pointer;
+    height: 18px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    & > .op {
+      vertical-align: top;
+      position: relative;
+      top: -3px;
+    }
   }
 }
