@@ -149,6 +149,7 @@
         @include t-body;
         //font-weight: 700;
         background-color: $c-primary-blue;
+        white-space: nowrap;
         color: $c-white;
         border: 0 solid transparent;
         border-radius: 4px;
