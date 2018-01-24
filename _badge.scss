@@ -1,16 +1,23 @@
+.badge {
+  @include badge-basic;
+  & > i.op, & > .op, & > [class^='op-icon-'] {
+    vertical-align: top;
+    margin: -4px 4px 0 4px;
+  }
 
-.badge-plain {
-  @include badge-basic;
-  color: $c-black;
-  background-color: $c-cool-gray-3;
+  &.badge-plain {
+    color: $c-black;
+    background-color: $c-cool-gray-3;
+  }
+
+  &.badge-success {
+    color: $c-white;
+    background-color: $c-positive;
+  }
+
+  &.badge-danger {
+    color: $c-white;
+    background-color: $c-warn-small;
+  }
 }
-.badge-success {
-  @include badge-basic;
-  color: $c-white;
-  background-color: $c-positive;
-}
-.badge-danger {
-  @include badge-basic;
-  color: $c-white;
-  background-color: $c-warn-small;
-}
+

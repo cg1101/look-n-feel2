@@ -45,6 +45,8 @@
 @mixin badge-basic {
   display: inline-block;
   padding: 2px 8px;
+  box-sizing: content-box;
+  height: 16px;
   @include t-caption;
   //font-size: 12px;
   //font-weight: 400;
