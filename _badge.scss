@@ -1,0 +1,16 @@
+
+.badge-plain {
+  @include badge-basic;
+  color: $c-black;
+  background-color: $c-cool-gray-3;
+}
+.badge-success {
+  @include badge-basic;
+  color: $c-white;
+  background-color: $c-positive;
+}
+.badge-danger {
+  @include badge-basic;
+  color: $c-white;
+  background-color: $c-warn-small;
+}

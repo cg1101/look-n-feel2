@@ -1,0 +1,85 @@
+@mixin t-display {
+  font-size: $text-display-size; // 42px
+  line-height: $text-display-line-height; // 54px 1.2857142857142858
+  //font-weight: $font-weight-regular;
+}
+
+@mixin t-headline {
+  font-size: $text-headline-size; // 28px;
+  line-height: $text-headline-line-height; //36px 1.2857142857142858
+  //font-weight: $font-weight-regular;
+}
+
+@mixin t-title {
+  font-size: $text-title-size; // 20px;
+  line-height: $text-title-line-height; // 32px 1.6
+  //font-weight: $font-weight-regular;
+}
+
+@mixin t-subheader {
+  font-size: $text-subheader-size; // 16px;
+  line-height: $text-subheader-line-height; // 24px 1.5
+  //font-weight: $font-weight-regular;
+}
+
+@mixin t-body {
+  font-size: $text-body-size; // 14px;
+  line-height: $text-body-line-height; // 18px 1.2857142857142858
+  //font-weight: $font-weight-regular;
+}
+
+@mixin t-caption {
+  font-size: $text-caption-size; // 12px;
+  letter-spacing: $text-caption-letter-spacing; // 0.86px;
+  line-height: $text-caption-line-height; // 16px 1.3333333333333333
+  text-transform: uppercase;
+  //font-weight: $font-weight-regular;
+}
+
+@mixin t-small {
+  font-size: $text-small-size; // 10px;
+  line-height: $text-small-line-height; // 16px 1.6
+  //font-weight: $font-weight-regular;
+}
+
+@mixin badge-basic {
+  display: inline-block;
+  padding: 2px 8px;
+  @include t-caption;
+  //font-size: 12px;
+  //font-weight: 400;
+  //line-height: 16px;
+  //text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 10px;
+}
+
+@mixin banner-basic {
+  border-radius: $banner-border-radius;
+  margin: 0 0 16px 0;
+  padding: 4px 16px 4px 16px;
+  color: $c-white;
+  background-color: $c-cool-gray-0;
+  font-weight: $font-weight-bold;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  @include t-small;
+  & > .title {
+    @include t-title;
+    margin-right: 16px;
+    font-weight: $font-weight-bold;
+  }
+  & > .body {
+    @include t-small();
+    flex-grow: 99;
+    margin-right: 16px;
+    font-weight: $font-weight-bold;
+  }
+  & > .link {
+    @include t-body;
+    font-weight: $font-weight-bold;
+  }
+}

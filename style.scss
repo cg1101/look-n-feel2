@@ -1,0 +1,17 @@
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+
+@import 'typography';
+@import 'badge';
+@import 'banners';
+@import 'cards';
+@import 'icons';
+
+
+body {
+  font-family: $default-font;
+  font-weight: $font-weight-regular;
+  background-color: $c-cool-gray-4;
+  @include t-body;
+}

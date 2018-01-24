@@ -1,0 +1,8 @@
+
+.banner {
+  @include banner-basic;
+
+  &.alert {
+    background-color: $c-warn-large;
+  }
+}

@@ -1,0 +1,53 @@
+
+b, .bold {
+  font-weight: $font-weight-bold;
+}
+
+h1, .h1, .t-display {
+  @include t-display;
+}
+
+.t-display-bold {
+  @include t-display;
+}
+
+h2, .h2, .t-headline {
+  @include  t-headline;
+}
+
+h3, .h3, .t-title {
+  @include t-title;
+}
+
+h4, .h4, .t-subheader {
+  @include t-subheader;
+}
+
+.t-body {
+  @include t-body;
+}
+
+h5, .h5, .t-caption {
+  @include t-caption;
+}
+
+h6, .h6, small, .small, .t-small {
+  @include t-small;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.text-success {
+  color: $c-positive;
+}
+.text-danger {
+  color: $c-warn-large;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
