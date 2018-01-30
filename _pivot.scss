@@ -1,0 +1,28 @@
+.pivot {
+  display: inline-block;
+  padding: 0;
+  border-bottom: 2px rgba($c-cool-gray-3, 0.8) solid;
+  & > * {
+    display: inline-block;
+    border: 0 solid transparent;
+    border-bottom-width: 4px;
+    margin: 0 8px 0 8px;
+    padding: 6px;
+    @include t-body;
+    color: $c-black;
+    font-weight: $font-weight-regular;
+    &:not(.label):not([disabled]):not(.active) {
+      cursor: pointer;
+    }
+    &[disabled] {
+      color: $c-cool-gray-2;
+      cursor: not-allowed;
+    }
+    &.active {
+      cursor: default;
+      font-weight: $font-weight-bold;
+      color: $c-primary-blue;
+      border-bottom-color: $c-primary-blue;
+    }
+  }
+}
