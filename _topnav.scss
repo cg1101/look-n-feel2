@@ -59,7 +59,7 @@ ul.top-nav {
         @include t-body;
         background-color: transparent;
 
-        display: block;
+        display: inline-block;
         border: 1px solid transparent;
         min-width: 22em;
         color: $c-black;
@@ -88,7 +88,14 @@ ul.top-nav {
     }
 
     &.account-selector {
+      & > a {
+        min-width: 15em;
+      }
+      & > a > span {
+        float: left;
+      }
       & > a > i.op {
+        float: right;
         filter: none;
       }
     }
@@ -113,30 +120,99 @@ ul.top-nav {
     display: block;
     visibility: hidden;
     position: absolute;
-    border: 2px solid $c-cool-gray-4;
-    padding: 4px 16px;
+    //border: 2px solid $c-cool-gray-4;
+    //padding: 4px 16px;
+    padding: 0;
     min-height: 50px;
     min-width: 50px;
     left: 0;
     background-color: $c-white;
-
     &.pull-right {
       left: inherit;
-      right: -2px;
+      //right: -2px;
+      right: 0;
     }
   }
 
   & > li {
     &:first-child > .my-dropdown-menu {
-      left: -2px;
-
+      //left: -2px;
+      left: 0;
       &.pull-right {
-        right: 0px;
+        right: 0;
         left: inherit;
       }
     }
     &:hover .my-dropdown-menu {
       visibility: visible;
+    }
+  }
+
+  ul.account-menu {
+    min-width: 100%;
+    & > li {
+      padding: 14px 32px;
+      &:hover {
+        background-color: $c-cool-gray-4;
+      }
+    }
+  }
+  div.date-picker-menu {
+    & > .menu-header {
+      border: 0 $c-cool-gray-4 solid;
+      border-top-width: 2px;
+
+      & > ul.my-pivot {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: 0 $c-cool-gray-4 solid;
+        border-bottom-width: 2px;
+        & > li {
+          display: inline-block;
+          font-weight: $font-weight-regular;
+          border: 0 solid transparent;
+          border-bottom-width: 4px;
+          @include t-caption;
+          padding: 16px 16px 8px 16px;
+          &:hover {
+            border-bottom-color: $c-primary-blue;
+          }
+        }
+      }
+    }
+    & > .menu-body {
+      padding: 32px;
+      min-width: 32em;
+
+      & > div {
+        //height: 120px;
+        & > .date-options {
+          display: inline-block;
+          padding: 16px;
+          vertical-align: top;
+
+          flex-flow: column wrap;
+          align-items: flex-start;
+          justify-content: space-between;
+          & > * {
+            display: block;
+            //border: solid blue thin;
+            //background-color: lightyellow;
+            margin: 4px;
+          }
+        }
+      }
+    }
+    & > .menu-footer {
+      border-top: 2px $c-cool-gray-4 solid;
+      padding: 32px;
+      & > button {
+        background-color: $c-cool-gray-4;
+        color: $c-white;
+        @include t-body;
+        border-radius: 4px;
+      }
     }
   }
 }

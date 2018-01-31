@@ -642,16 +642,20 @@
 <section>
     <h1>Top Nav</h1>
     <hr>
-    <div style="margin:20px;overflow-x:auto;border:lightgray solid thin;height: 200px;background-color: lightyellow;">
+    <div style="margin:20px;overflow-x:auto;border:lightgray solid thin;height: 600px;background-color: lightyellow;">
         <ul class="top-nav">
             <li class="account-selector">
                 <a>
                     <span class="t-subheader">Account</span>
                     <i class="op op-icon-down"></i>
                 </a>
-                <div class="my-dropdown-menu">
-
-                </div>
+                <ul class="my-dropdown-menu account-menu">
+                    <li>Billing</li>
+                    <li>Sites</li>
+                    <li>Settings</li>
+                    <li>User Management</li>
+                    <li>Add Account</li>
+                </ul>
             </li>
             <li class="search-box">
                 <a>
@@ -665,8 +669,37 @@
                     <span class="t-subheader">Past Day</span>
                     <span class="t-body">UTC +1</span>
                 </a>
-                <div class="my-dropdown-menu">
-
+                <div class="my-dropdown-menu date-picker-menu">
+                    <div class="menu-header">
+                        <ul class="my-pivot">
+                            <li>Date</li>
+                            <li>Time Zone</li>
+                        </ul>
+                    </div>
+                    <div class="menu-body">
+                        What time periods matter most to you? You'll be able to change this later.
+                        <div>
+                            <ul class="date-options">
+                                <li>Past Day</li>
+                                <li>Current Week</li>
+                                <li>Current Month</li>
+                                <li>Current Quarter</li>
+                                <li>Current Year</li>
+                            </ul>
+                            <ul class="date-options">
+                                <li>Previous Week</li>
+                                <li>Previous Month</li>
+                                <li>Previous Quarter</li>
+                                <li>Previous Year</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <i class="op op-icon-calendar"></i> Add custom Date Range
+                        </div>
+                    </div>
+                    <div class="menu-footer">
+                        <button>Save Changes <i class="op op-icon-check"></i></button>
+                    </div>
                 </div>
             </li>
             <li class="segment-picker">
