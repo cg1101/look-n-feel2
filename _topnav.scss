@@ -7,13 +7,14 @@ ul.top-nav {
   & > li {
     position: relative;
     display: inline-block;
-    border: 0 $c-cool-gray-4 solid;
-    border-left-width: 2px;
+    //border: 0 $c-cool-gray-4 solid;
     background-color: $c-white;
     //height: 64px;
 
     & > a {
       box-sizing: border-box;
+      border: 0 $c-cool-gray-4 solid;
+      border-left-width: 2px;
       display: block;
       min-width: 24px;
       height: 64px;
@@ -40,7 +41,7 @@ ul.top-nav {
       }
     }
 
-    &:first-child {
+    &:first-child > a {
       border-left-width: 0;
     }
 
@@ -110,12 +111,32 @@ ul.top-nav {
 
   .my-dropdown-menu {
     display: block;
+    visibility: hidden;
+    position: absolute;
+    border: 2px solid $c-cool-gray-4;
     padding: 4px 16px;
     min-height: 50px;
     min-width: 50px;
-    border: thin solid black;
-    visibility: visible;
-    position: absolute;
     left: 0;
+    background-color: $c-white;
+
+    &.pull-right {
+      left: inherit;
+      right: -2px;
+    }
+  }
+
+  & > li {
+    &:first-child > .my-dropdown-menu {
+      left: -2px;
+
+      &.pull-right {
+        right: 0px;
+        left: inherit;
+      }
+    }
+    &:hover .my-dropdown-menu {
+      visibility: visible;
+    }
   }
 }
