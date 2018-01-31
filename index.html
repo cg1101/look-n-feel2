@@ -616,6 +616,8 @@
 
 <!--link-->
 <section>
+    <h1>Links</h1>
+    <hr>
     <div style="display: flex;flex-flow: row wrap;width: 380px;">
         <div class="jumplink active">
             <div class="title"><i class="op op-icon-campaign"></i>3</div>
@@ -629,7 +631,7 @@
             <div class="title"><i class="op op-icon-creative"></i>8</div>
             <div class="label">Live Creatives</div>
         </div>
-            <div class="jumplink">
+        <div class="jumplink">
             <div class="title"><i class="op op-icon-nurture"></i>5</div>
             <div class="label">Live Nurtures</div>
         </div>
@@ -641,39 +643,58 @@
     <h1>Top Nav</h1>
     <hr>
     <div style="margin:20px;overflow-x:auto;border:lightgray solid thin;height: 200px;background-color: lightyellow;">
-        <nav class="top-nav">
-            <div class="account-selector">
-                <span class="t-subheader">Account</span>
-                <i class="op op-icon-down"></i>
-            </div>
-            <div class="search-box">
-                <i class="op op-icon-search"></i>
-                <input type="text" placeholder="Search for [audiences, campaigns, creatives]….">
-            </div>
-            <div class="date-picker">
-                <i class="op op-icon-calendar"></i>
-                <span class="t-subheader">Past Day</span>
-                <span class="t-body">UTC +1</span>
-            </div>
-            <div class="segment-picker">
-                <i class="op op-icon-segments"></i>
-                <span class="t-subheader">2 Segments</span>
-            </div>
-            <div class="user-menu">
-                <i class="op op-icon-user"></i>
-                <span class="t-subheader">User Name</span>
-                <i class="op op-icon-down"></i>
-            </div>
-            <div class="notification">
-                <i class="op op-icon-notifications"></i>
-            </div>
-            <div class="bookmark">
-                <i class="op op-icon-bookmarks"></i>
-            </div>
-            <div class="history">
-                <i class="op op-icon-history"></i>
-            </div>
-        </nav>
+        <ul class="top-nav">
+            <li class="account-selector">
+                <a>
+                    <span class="t-subheader">Account</span>
+                    <i class="op op-icon-down"></i>
+                </a>
+            </li>
+            <li class="search-box">
+                <a>
+                    <i class="op op-icon-search"></i>
+                    <input type="text" placeholder="Search for [audiences, campaigns, creatives]….">
+                </a>
+            </li>
+            <li class="date-picker">
+                <a>
+                    <i class="op op-icon-calendar"></i>
+                    <span class="t-subheader">Past Day</span>
+                    <span class="t-body">UTC +1</span>
+                </a>
+                <div class="my-dropdown-menu">
+
+                </div>
+            </li>
+            <li class="segment-picker">
+                <a>
+                    <i class="op op-icon-segments"></i>
+                    <span class="t-subheader">2 Segments</span>
+                </a>
+            </li>
+            <li class="user-menu">
+                <a>
+                    <i class="op op-icon-user"></i>
+                    <span class="t-subheader">User Name</span>
+                    <i class="op op-icon-down"></i>
+                </a>
+            </li>
+            <li class="notification">
+                <a>
+                    <i class="op op-icon-notifications"></i>
+                </a>
+            </li>
+            <li class="bookmark">
+                <a>
+                    <i class="op op-icon-bookmarks"></i>
+                </a>
+            </li>
+            <li class="history">
+                <a>
+                    <i class="op op-icon-history"></i>
+                </a>
+            </li>
+        </ul>
     </div>
 </section>
 
