@@ -25,14 +25,18 @@ i.op, .op {
 i.op, .op {
   display: inline-block;
   filter: invert(100%);
-  width: 24px;
-  height: 24px;
-  //background-size: cover;
-  //background-position: center;
+  font-size: inherit;
+  vertical-align: -0.125em;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  overflow: visible;
 
   &.op-2x {
-    width: 48px;
-    height: 48px;
+    width: 2em;
+    height: 2em;
   }
 }
 
