@@ -12,6 +12,7 @@ ul.top-nav {
     //height: 64px;
 
     & > a {
+      font-size: 24px;
       box-sizing: border-box;
       border: 0 $c-cool-gray-4 solid;
       border-left-width: 2px;
@@ -46,7 +47,7 @@ ul.top-nav {
     }
 
     &.search-box > a {
-      min-width: 28em;
+      min-width: 17em;
       & > input {
         box-sizing: border-box;
         margin: 0;
@@ -89,7 +90,7 @@ ul.top-nav {
 
     &.account-selector {
       & > a {
-        min-width: 15em;
+        min-width: 10em;
       }
       & > a > span {
         float: left;
@@ -211,7 +212,7 @@ ul.top-nav {
         right: 0;
         min-width: 120px;
         @include t-body;
-        //font-weight: 700;
+        font-weight: 700;
         background-color: $c-primary-blue;
         white-space: nowrap;
         color: $c-white;
