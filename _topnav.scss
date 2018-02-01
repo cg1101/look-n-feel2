@@ -289,4 +289,41 @@ ul.top-nav {
       }
     }
   }
+  div.bookmark-menu {
+    width: 500%;
+    background-color: $c-cool-gray-0;
+    color: $c-cool-gray-3;
+    & > ul {
+      margin: 0;
+      padding: 0;
+      & > li {
+        margin: 0 0 4px 0;
+        padding: 16px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        &.header-0 {
+          @include t-subheader;
+        }
+        &.header-1 {
+          @include t-caption;
+        }
+        &.item {
+          & > span.icon {
+            font-size: 24px;
+            flex-grow: 0;
+            margin: 8px;
+          }
+          & > .content {
+            flex-grow:5;
+            margin-left: 16px;
+            @include t-body;
+            font-weight: $font-weight-bold;
+          }
+
+        }
+      }
+    }
+  }
 }
