@@ -7,8 +7,8 @@
 
 .op-2x {
   i.op, .op {
-    width: 48px;
-    height: 48px;
+    width: 2em;
+    height: 2em;
   }
 }
 
@@ -17,8 +17,8 @@ i.op, .op {
     filter: invert(100%);
   }
   &.op-2x {
-    width: 48px;
-    height: 48px;
+    width: 2em;
+    height: 2em;
   }
 }
 
