@@ -76,7 +76,7 @@
     text-overflow: ellipsis;
   }
   & > .body {
-    @include t-small();
+    @include t-small;
     flex-grow: 99;
     margin-right: 16px;
     white-space: nowrap;
@@ -88,10 +88,5 @@
     height: 18px;
     white-space: nowrap;
     text-overflow: ellipsis;
-    & > .op {
-      vertical-align: top;
-      position: relative;
-      top: -3px;
-    }
   }
 }

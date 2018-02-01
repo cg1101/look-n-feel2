@@ -1,8 +1,10 @@
 .badge {
   @include badge-basic;
   & > i.op, & > .op, & > [class^='op-icon-'] {
-    vertical-align: top;
-    margin: -4px 4px 0 4px;
+  //  font-size: 24px;
+  //  vertical-align: top;
+  //  margin: -4px 4px 0 4px;
+    margin: 0 4px;
   }
 
   &.badge-plain {
