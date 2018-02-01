@@ -24,10 +24,7 @@
     @include t-display;
 
     & > .op, & > i.op {
-      width: 32px;
-      height: 32px;
-      background-size: cover;
-      vertical-align: baseline;
+      font-size: 32px;
       margin-right: 16px;
     }
   }
