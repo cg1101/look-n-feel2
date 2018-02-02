@@ -1,0 +1,33 @@
+.btn, button.btn, a.btn {
+  background-color: $c-primary-blue;
+  color: $c-white;
+
+  border-radius: 4px;
+  border: 1px solid transparent;
+
+  @include t-body;
+  font-weight: $font-weight-bold;
+
+  padding: 6px 24px;
+  box-shadow: 0 1px 0 0 #0C65B3;
+
+  &[disabled] {
+    background-color: $c-cool-gray-3;
+    color: $c-cool-gray-2;
+    box-shadow: 0 1px 0 0 #ACB5BE;
+  }
+
+  &.btn-holo {
+    background-color: $c-white;
+    color: $c-primary-blue;
+    border-color: $c-primary-blue;
+    box-shadow: none;
+
+    &[disabled] {
+      background-color: $c-white;
+      color: $c-cool-gray-2;
+      border-color: $c-cool-gray-3;
+      box-shadow: 0 1px 0 0 #ACB5BE;
+    }
+  }
+}
