@@ -3,6 +3,37 @@ ul.top-nav {
   margin: 0 0 10px 0;
   padding: 0;
   position: relative;
+  background-color: $c-cool-gray-4;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  z-index: 100;
+  & > li {
+    &.account-selector {
+      flow-grow: 1;
+    }
+    &.search-box {
+      flow-grow: 1;
+    }
+    &.date-picker {
+      flow-grow: 0;
+    }
+    &.segment-picker {
+      flow-grow: 0;
+    }
+    &.user-menu {
+      flow-grow: 0;
+    }
+    &.notification {
+      flow-grow: 0;
+    }
+    &.bookmark {
+      flow-grow: 0;
+    }
+    &.history {
+      flow-grow: 0;
+    }
+  }
 
   & > li {
     position: relative;
@@ -314,4 +345,21 @@ ul.top-nav {
       }
     }
   }
+
+}
+
+.side-info {
+  display: none;
+  box-sizing: border-box;
+  font-size: 24px;
+  width: 16.6666667em;
+  height: 100%;
+  border: 0 solid blue;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 40px 0 0 0;
+  background-color: $c-cool-gray-0;
+  overflow-y: auto;
+  z-index: 1;
 }
