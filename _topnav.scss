@@ -292,10 +292,13 @@ ul.top-nav {
       padding: 8px 24px 8px 24px;
     }
   }
+  &.dark-menu {
+    width: 500%;
+    display: none;
+  }
 }
 
 .dark-menu {
-  width: 500%;
   background-color: $c-cool-gray-0;
   color: $c-cool-gray-3;
   & > ul {
@@ -362,8 +365,30 @@ ul.top-nav {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 40px 0 0 0;
+  padding: 64px 0 0 0;
   background-color: $c-cool-gray-0;
   overflow-y: auto;
   z-index: 1;
+}
+
+.auto {
+  display: none;
+}
+
+#screen.notification {
+  & .auto.notification {
+    display: block;
+  }
+}
+
+#screen.bookmark {
+  & .auto.bookmark {
+    display: block;
+  }
+}
+
+#screen.history {
+  .auto.history {
+    display: block;
+  }
 }

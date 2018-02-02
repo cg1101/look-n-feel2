@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <!--text-->
 <section>
     <h1>Text</h1>
@@ -643,10 +642,10 @@
     <h1>Top Nav</h1>
     <hr>
     <div style="margin:20px;overflow-x:auto;border:lightgray solid thin;height: 600px;background-color: lightyellow;">
-        <div style="position: relative; z-index: 0;height:800px;">
-            <div id="side-info" class="side-info">
+        <div id="screen" style="position: relative; z-index: 0;height:800px;">
+            <div id="side-info" class="side-info auto notification bookmark history">
                 <div id="side-content" class="dark-menu">
-                    <ul>
+                    <ul class="auto notification">
                         <li class="header-0">Notifications</li>
                         <li class="header-1">new</li>
                         <li class="item bright">
@@ -699,7 +698,71 @@
                             </div>
                         </li>
                     </ul>
-
+                    <ul class="auto bookmark">
+                        <li class="header-0">Bookmarks</li>
+                        <li class="header-1">Creatives</li>
+                        <li class="item">
+                            <span class="icon"><i class="op op-icon-bookmarks"></i></span>
+                            <div class="content"><p>ROKT email - Canada</p></div>
+                        </li>
+                        <li class="item">
+                            <span class="icon"><i class="op op-icon-bookmarks"></i></span>
+                            <div class="content"><p>ROKT email - Canada</p></div>
+                        </li>
+                        <li class="header-1">Campaigns</li>
+                        <li class="item">
+                            <span class="icon"><i class="op op-icon-bookmarks"></i></span>
+                            <div class="content"><p>Rokt email - France</p></div>
+                        </li>
+                        <li class="item">
+                            <span class="icon"><i class="op op-icon-bookmarks"></i></span>
+                            <div class="content"><p>Rokt email - US</p></div>
+                        </li>
+                        <li class="header-1">Widgets</li>
+                        <li class="item">
+                            <span class="icon"><i class="op op-icon-bookmarks"></i></span>
+                            <div class="content"><p>Central - Checkout Widget</p></div>
+                        </li>
+                    </ul>
+                    <ul class="auto history">
+                        <li class="header-0">History</li>
+                        <li class="item bright">
+                            <span class="icon"><i class="op op-icon-campaign"></i></span>
+                            <div class="content">
+                                <p class="message-small bright">
+                                    You created a new Campaign</p>
+                                <p>ROKT email - Canada</p>
+                                <p class="time">yesterday 3:04pm</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <span class="icon"><i class="op op-icon-campaign"></i></span>
+                            <div class="content">
+                                <p class="message-small bright">
+                                    You created a new Campaign</p>
+                                <p>ROKT email - Canada</p>
+                                <p class="time">yesterday 3:04pm</p>
+                            </div>
+                        </li>
+                        <li class="item bright">
+                            <span class="icon"><i class="op op-icon-creative"></i></span>
+                            <div class="content">
+                                <p class="message-small bright">
+                                    Jill Doe submitted a new Creative for review:</p>
+                                <p>ROKT Email inline - US</p>
+                                <p class="time">yesterday 3:04pm</p>
+                            </div>
+                        </li>
+                        <li class="item bright">
+                            <span class="icon"><i class="op op-icon-campaign"></i></span>
+                            <div class="content">
+                                <p class="message-small bright">
+                                    You creaed a new Campaign</p>
+                                <p>ROKT email - Canada</p>
+                                <p class="time">yesterday 3:04pm</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <ul class="top-nav">
@@ -821,7 +884,8 @@
 
                     </div>
                 </li>
-                <li class="notification">
+                <li class="notification" onmouseenter="void toggle('notification', true);"
+                    onmouseleave="void toggle('notification', false);">
                     <a>
                         <i class="op op-icon-notifications"></i>
                     </a>
@@ -881,7 +945,8 @@
                         </ul>
                     </div>
                 </li>
-                <li class="bookmark">
+                <li class="bookmark" onmouseenter="void toggle('bookmark', true);"
+                    onmouseleave="void toggle('bookmark', false);">
                     <a>
                         <i class="op op-icon-bookmarks"></i>
                     </a>
@@ -914,7 +979,8 @@
                         </ul>
                     </div>
                 </li>
-                <li class="history">
+                <li class="history" onmouseenter="void toggle('history', true);"
+                    onmouseleave="void toggle('history', false);">
                     <a>
                         <i class="op op-icon-history"></i>
                     </a>
@@ -961,9 +1027,22 @@
                     </div>
                 </li>
             </ul>
+
+            <div style="padding: 24px;">
+                <p class="auto notification">show notification</p>
+                <p class="auto bookmark">show bookmark</p>
+                <p class="auto history">show history</p>
+            </div>
         </div>
     </div>
 </section>
-
+<script>
+    var screen = document.getElementById('screen');
+    // console.log('screen is', screen);
+    function toggle(key, visible) {
+        screen.classList.toggle(key);
+        console.log(screen.classList);
+    }
+</script>
 </body>
 </html>
