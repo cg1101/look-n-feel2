@@ -116,7 +116,7 @@ ul.top-nav {
       }
     }
 
-    &.notification {
+    &.notification, &.bookmark, &.history {
       &:hover {
         background-color: $c-cool-gray-0;
         color: $c-cool-gray-4;
@@ -202,6 +202,7 @@ ul.top-nav {
 
   ul.account-menu {
     min-width: 100%;
+    list-style: none;
     & > li {
       padding: 14px 32px;
       &:hover {
@@ -256,40 +257,7 @@ ul.top-nav {
     min-width: 100%;
   }
 
-  div.notification-menu {
-    width: 500%;
-    background-color: $c-cool-gray-0;
-    color: $c-cool-gray-3;
-    & > ul {
-      margin: 0;
-      padding: 0;
-      & > li {
-        margin: 0 0 4px 0;
-        padding: 16px;
-        &.header-0 {
-          @include t-subheader;
-        }
-        &.header-1 {
-          @include t-caption;
-        }
-        &.item {
-          padding-left: 64px;
-          background-color: $c-cool-gray-1;
-          & > span:first-child {
-            position: absolute;
-            font-size: 24px;
-            margin-left: -1.8em;
-            margin-top: 0.5em;
-          }
-          & > p.time {
-            @include t-caption;
-            color: $c-cool-gray-2;
-          }
-        }
-      }
-    }
-  }
-  div.bookmark-menu {
+  div.dark-menu {
     width: 500%;
     background-color: $c-cool-gray-0;
     color: $c-cool-gray-3;
@@ -303,6 +271,9 @@ ul.top-nav {
         flex-flow: row nowrap;
         justify-content: flex-start;
         align-items: center;
+        &:last-child {
+          margin-bottom: 0;
+        }
         &.header-0 {
           @include t-subheader;
         }
@@ -310,16 +281,33 @@ ul.top-nav {
           @include t-caption;
         }
         &.item {
+          &.bright {
+            background-color: $c-cool-gray-1;
+          }
           & > span.icon {
             font-size: 24px;
             flex-grow: 0;
             margin: 8px;
           }
           & > .content {
-            flex-grow:5;
+            flex-grow: 5;
             margin-left: 16px;
             @include t-body;
-            font-weight: $font-weight-bold;
+            & > p {
+              &.message-small {
+                @include t-small;
+                font-weight: $font-weight-regular;
+                color: $c-cool-gray-2;
+              }
+              &.message {
+                font-weight: $font-weight-regular;
+              }
+              &.time {
+                @include t-caption;
+                font-weight: $font-weight-regular;
+                color: $c-cool-gray-2;
+              }
+            }
           }
 
         }
