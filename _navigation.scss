@@ -24,7 +24,7 @@
     cursor: pointer;
     & > .toggle {
       display: inline-block;
-      background-image: url('./assets/menu.svg');
+      background-image: url('assets/svg/menu.svg');
       width: 24px;
       height: 24px;
       margin: 16px 24px 24px 24px;
@@ -38,7 +38,7 @@
       margin-left: -9px;
       width: 71px;
       height: 20px;
-      background-image: url('./assets/rokt-logo.svg');
+      background-image: url('assets/svg/rokt-logo.svg');
       background-size: cover;
       filter: invert(100%);
       cursor: pointer;
